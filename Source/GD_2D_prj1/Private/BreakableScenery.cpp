@@ -13,9 +13,7 @@ ABreakableScenery::ABreakableScenery()
 	Sprite = CreateDefaultSubobject<UPaperSpriteComponent>(TEXT("SpriteComponent"));
 	Collider = CreateDefaultSubobject<UBoxComponent>(TEXT("Box Trigger"));
 	RootComponent = Sprite;
-	Collider->SetupAttachment(RootComponent);
-	Collider->SetRelativeScale3D(FVector::One() * 0.3);
-	
+	Collider->SetupAttachment(RootComponent);	
 }
 
 // Called when the game starts or when spawned

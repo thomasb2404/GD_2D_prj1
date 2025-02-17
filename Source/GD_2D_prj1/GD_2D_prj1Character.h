@@ -58,6 +58,11 @@ protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* InputComponent) override;
 	// End of APawn interface
 
+	// Function to handle collisions
+	UFUNCTION(BlueprintCallable, Category = "Collision")
+	void OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+
+
 public:
 	AGD_2D_prj1Character();
 	//code for controlling the stamina of the player
